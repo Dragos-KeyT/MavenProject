@@ -2,6 +2,7 @@ package curs17;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,11 @@ public class WebElementExample {
 	
 	@BeforeClass
 	public void setup() {
+	
+		//System.setProperty("webdrier.chrome.driver", "../chromedriver.exe");
+		//WebDriver driver =  new ChromeDriver();
+		
+		
 		driver = WebDriverManager.chromedriver().create();
 		driver.get("https://keybooks.ro");
 	}
